@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body onload="main()">
+    <div class="container">
+        <div id="heading" class="txt-cen">Welcome to the tictactoe Game. Select the mode you want to play</div>
+
+        <!-- loading section -->
+        <div id="loading" class="txt-cen">Loading...</div>
+
+        <!-- players choices -->
+        <div id="choices" class="choice-sec hidden">
+            <div class="row">
+                <div class="col-md mode">
+                    <button type="button" class="btn btn-primary btn-lg" onclick="modeSelected('PLAYER1vsPLAYER2')">Player 1 vs Player 2</button>
+                </div>
+                <div class="col-md mode">
+                    <button type="button" class="btn btn-primary btn-lg"  onclick="modeSelected('PLAYERvsAI')">Player 1 vs Computer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game board -->
+        <div id="board" class="row txt-cen hidden" style="margin:0px 1em">
+            <div class="row" style="width: 100%;">
+                <div class="col-md">
+                    <button id="player1" type="button" class="btn btn-primary btn-lg">Player 1</button>
+                </div>
+                <div class="col-md txt-cen">
+                    <div id="playBoard" class="play-box" onclick="boxClicked(event)">
+                    </div>
+                </div>
+                <div class="col-md txt-cen">
+                    <button id="player2" type="button" class="btn btn-success btn-lg inactive">Player 2</button>
+                </div>
+            </div>
+            <div id="btmbar" class="bottom-bar">
+                <button id="playAgain" type="button" class="btn btn-outline-primary btn-lg hide" onclick="playAgain()">Play Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+
+</html>
